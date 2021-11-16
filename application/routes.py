@@ -36,7 +36,7 @@ def update_task(id, new_description):
 @app.route('/delete/task/<int:id>')
 def delete_task(id):
     task = Tasks.query.get(id)
-   db.session.delete(task)
+    db.session.delete(task)
     db.session.commit()
     return f"Task {id} deleted"
 
